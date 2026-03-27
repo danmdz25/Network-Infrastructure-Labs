@@ -23,7 +23,7 @@ Como analista forense, a compreensão deste laboratório permite:
 ---
 
 ## 📂 Arquivos no Repositório
-- `ospfv3_topology.pkt`: Arquivo do Cisco Packet Tracer.
+- `router_ipv6 - OSPF.pkt`: Arquivo do Cisco Packet Tracer.
 - `Relatório de Configuração_ Topologia IPv6 com OSPFv3 _ Configuration Report_ IPv6 Topology with OSPFv3.pdf`: Relatório de todos os comandos utilizados.
 
 ---
@@ -49,7 +49,7 @@ As a forensic analyst, understanding this lab allows for:
 
 ---
 ## 📂 Files in the Repository
-- `ospfv3_topology.pkt`: Cisco Packet Tracer file.
+- `router_ipv6 - OSPF.pkt`: Cisco Packet Tracer file.
 - `Relatório de Configuração_ Topologia IPv6 com OSPFv3 _ Configuration Report_ IPv6 Topology with OSPFv3.pdf`: Report of all commands used.
 ---
 
