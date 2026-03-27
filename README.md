@@ -1,6 +1,6 @@
 # Network Infrastructure Labs 🌐🛡️
 
-[For English version, click here](#english-version)
+[For English version, click here](#english-version-section)
 
 Bem-vindo ao meu repositório de laboratórios de infraestrutura de rede. Este espaço é dedicado à documentação e implementação de arquiteturas de rede fundamentais, servindo como base técnica para minha especialização em **Digital Forensics and Incident Response (DFIR)**.
 
@@ -16,12 +16,12 @@ O foco deste repositório não é apenas configurar dispositivos, mas compreende
 
 ---
 
-### 🔹 [Lab 01: IPv6 & OSPFv3 Core](./Lab-OSPFv3)
+### 🔹 [Lab 01: IPv6 & OSPFv3 Core](./Lab-01-IPv6-OSPFv3)
 Implementação de um backbone de rede utilizando endereçamento IPv6 e roteamento dinâmico. 
 * **Foco:** Interconectividade entre roteadores e redundância.
 * **Visão DFIR:** Análise de integridade de tabelas de roteamento e prevenção de ataques de redirecionamento de tráfego.
 
-### 🔹 [Lab 02: Enterprise Segmentation (VLAN + DHCP)](./Lab-VLAN-DHCP)
+### 🔹 [Lab 02: Enterprise Segmentation (VLAN + DHCP)](./Lab-02-VLAN-DHCP)
 **Este é um projeto integrado** que simula uma rede corporativa completa com segmentação de departamentos e automação de endereçamento.
 * **Foco:** Configuração de Switches (VLANs/Trunking) e Roteador (Router-on-a-Stick + DHCP Pool).
 * **Visão DFIR:** Rastreabilidade de ativos através de logs DHCP e isolamento de incidentes via segmentação de Camada 2.
@@ -49,7 +49,8 @@ A compreensão profunda da infraestrutura permite que um analista de resposta a 
 
 <br>
 
-# English Version 🇺🇸
+<a name="english-version-section"></a>
+# Network Infrastructure Labs 🌐🛡️ (English Version) 🇺🇸
 
 Welcome to my repository of network infrastructure labs. This space is dedicated to documenting and implementing fundamental network architectures, serving as the technical foundation for my specialization in **Digital Forensics and Incident Response (DFIR)**.
 
@@ -65,12 +66,12 @@ The focus of this repository is not just on configuring devices, but on deeply u
 
 ---
 
-### 🔹 [Lab 01: IPv6 & OSPFv3 Core](./Lab-OSPFv3)
+### 🔹 [Lab 01: IPv6 & OSPFv3 Core](./Lab-01-IPv6-OSPFv3)
 Implementation of a network backbone using IPv6 addressing and dynamic routing. 
 * **Focus:** Interconnectivity between routers and redundancy.
 * **DFIR Perspective:** Analysis of routing table integrity and prevention of traffic redirection attacks.
 
-### 🔹 [Lab 02: Enterprise Segmentation (VLAN + DHCP)](./Lab-VLAN-DHCP)
+### 🔹 [Lab 02: Enterprise Segmentation (VLAN + DHCP)](./Lab-02-VLAN-DHCP)
 **This is an integrated project** that simulates a complete corporate network with departmental segmentation and address automation.
 * **Focus:** Switch configuration (VLANs/Trunking) and Router configuration (Router-on-a-Stick + DHCP Pool).
 * **DFIR Perspective:** Asset traceability through DHCP logs and incident isolation via Layer 2 segmentation.
