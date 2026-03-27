@@ -1,48 +1,95 @@
 # Network Infrastructure Labs 🌐🛡️
 
-Este repositório contém documentações técnicas e laboratórios de configuração de redes, servindo como base fundamental para estudos em **Digital Forensics and Incident Response (DFIR)** e **Segurança de Rede**.
+[For English version, click here](#english-version)
 
-O objetivo aqui é documentar a implementação de protocolos de roteamento, segmentação de camada 2 e serviços de rede, compreendendo como o tráfego flui para melhor identificar anomalias e incidentes.
+Bem-vindo ao meu repositório de laboratórios de infraestrutura de rede. Este espaço é dedicado à documentação e implementação de arquiteturas de rede fundamentais, servindo como base técnica para minha especialização em **Digital Forensics and Incident Response (DFIR)**.
 
-
-
-## 📁 Estrutura do Repositório
-
-O projeto está dividido em módulos que cobrem desde a base do endereçamento até o roteamento dinâmico:
-
-### 1. IPv6 & OSPFv3 Implementation
-- **Foco:** Configuração de roteamento dinâmico em ambientes IPv6.
-- **Destaque:** Implementação de Router IDs, interfaces Loopback e adjacências de rede.
-- **Relevância para DFIR:** Entender a tabela de roteamento é crucial para identificar ataques de *Route Hijacking* ou desvios de tráfego maliciosos.
-
-### 2. VLAN Segmentation & Access Control
-- **Foco:** Criação de VLANs (Administração, Financeiro e RH) e atribuição de portas.
-- **Destaque:** Configuração de portas de acesso e interfaces Trunk (802.1Q).
-- **Relevância para DFIR:** A segmentação correta define o "Blast Radius" (raio de exposição) em um incidente. Investigar VLANs ajuda a mapear movimentos laterais de um atacante.
-
-### 3. Inter-VLAN Routing & DHCP Services
-- **Foco:** Configuração de subinterfaces (Router-on-a-Stick) e escopos DHCP.
-- **Destaque:** Automação de endereçamento IP e roteamento entre redes distintas.
-- **Relevância para DFIR:** Logs de DHCP são fontes de evidências críticas para correlacionar um endereço IP a um endereço MAC específico durante uma linha do tempo de ataque.
+> "Para investigar o que deu errado em uma rede, primeiro você deve ser capaz de construir e entender como ela funciona corretamente."
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas
-- **Cisco IOS** (Comandos de configuração via CLI)
-- **Protocolos:** OSPFv3, IPv6, IEEE 802.1Q (Trunking), DHCP.
-- **Simuladores Sugeridos:** Cisco Packet Tracer / GNS3.
-
-## 🚀 Como utilizar este material
-Cada pasta contém um guia passo a passo com os comandos explicados. Você pode replicar as configurações em simuladores de rede para validar o comportamento do tráfego.
+## 🎯 Objetivo
+O foco deste repositório não é apenas configurar dispositivos, mas compreender a fundo o comportamento dos protocolos. Em segurança defensiva, o conhecimento de infraestrutura permite:
+* **Identificar anomalias:** Diferenciar tráfego legítimo de protocolos mal-intencionados.
+* **Mapear superfícies de ataque:** Entender como a segmentação protege ativos críticos.
+* **Rastreabilidade:** Utilizar serviços como DHCP e Roteamento para reconstruir linhas do tempo (*timelines*) em incidentes.
 
 ---
 
-## 🔍 Conexão com Segurança e Forense
-A base de qualquer investigação digital reside na compreensão da infraestrutura. Este repositório demonstra proficiência em:
-- **Análise de Topologia:** Saber onde os ativos estão e como se comunicam.
-- **Monitoramento de Fluxo:** Identificar pontos onde dispositivos de monitoramento (como IDS/IPS) devem ser posicionados.
-- **Gestão de Evidências de Rede:** Compreender a origem de logs de roteadores e switches.
+### 🔹 [Lab 01: IPv6 & OSPFv3 Core](./Lab-OSPFv3)
+Implementação de um backbone de rede utilizando endereçamento IPv6 e roteamento dinâmico. 
+* **Foco:** Interconectividade entre roteadores e redundância.
+* **Visão DFIR:** Análise de integridade de tabelas de roteamento e prevenção de ataques de redirecionamento de tráfego.
+
+### 🔹 [Lab 02: Enterprise Segmentation (VLAN + DHCP)](./Lab-VLAN-DHCP)
+**Este é um projeto integrado** que simula uma rede corporativa completa com segmentação de departamentos e automação de endereçamento.
+* **Foco:** Configuração de Switches (VLANs/Trunking) e Roteador (Router-on-a-Stick + DHCP Pool).
+* **Visão DFIR:** Rastreabilidade de ativos através de logs DHCP e isolamento de incidentes via segmentação de Camada 2.
 
 ---
-**Mantido por:** [Daniel Mendes/danmdz25]
-*Foco em Cibersegurança | SOC Analyst | DFIR Student*
+
+## 🛠️ Stack Tecnológica
+* **Simuladores:** Cisco Packet Tracer.
+* **Sistemas:** Cisco IOS.
+* **Protocolos:** OSPFv3, IPv6, IEEE 802.1Q (Trunking), DHCP, ICMP.
+
+---
+
+## 🔍 Por que Redes para DFIR?
+A compreensão profunda da infraestrutura permite que um analista de resposta a incidentes possa:
+1. **Mapear o Fluxo:** Entender por onde o tráfego de um atacante passou.
+2. **Coletar Evidências:** Saber quais dispositivos (Switches ou Roteadores) detêm as informações de conexão (ARP, MAC, DHCP Leases).
+3. **Contenção:** Saber como isolar portas ou VLANs para impedir a propagação de malwares.
+
+---
+**Mantido por:** Daniel Mendes (@danmdz25)  
+*Foco em Cibersegurança | IT Support | DFIR Student*
+
+---
+
+<br>
+
+# English Version 🇺🇸
+
+Welcome to my repository of network infrastructure labs. This space is dedicated to documenting and implementing fundamental network architectures, serving as the technical foundation for my specialization in **Digital Forensics and Incident Response (DFIR)**.
+
+> “To investigate what went wrong in a network, you must first be able to build and understand how it works correctly.”
+
+---
+
+## 🎯 Objective
+The focus of this repository is not just on configuring devices, but on deeply understanding protocol behavior. In defensive security, infrastructure knowledge allows you to:
+* **Identify anomalies:** Distinguish legitimate traffic from malicious protocols.
+* **Map attack surfaces:** Understand how segmentation protects critical assets.
+* **Traceability:** Use services such as DHCP and Routing to reconstruct incident timelines.
+
+---
+
+### 🔹 [Lab 01: IPv6 & OSPFv3 Core](./Lab-OSPFv3)
+Implementation of a network backbone using IPv6 addressing and dynamic routing. 
+* **Focus:** Interconnectivity between routers and redundancy.
+* **DFIR Perspective:** Analysis of routing table integrity and prevention of traffic redirection attacks.
+
+### 🔹 [Lab 02: Enterprise Segmentation (VLAN + DHCP)](./Lab-VLAN-DHCP)
+**This is an integrated project** that simulates a complete corporate network with departmental segmentation and address automation.
+* **Focus:** Switch configuration (VLANs/Trunking) and Router configuration (Router-on-a-Stick + DHCP Pool).
+* **DFIR Perspective:** Asset traceability through DHCP logs and incident isolation via Layer 2 segmentation.
+
+---
+
+## 🛠️ Technology Stack
+* **Simulators:** Cisco Packet Tracer.
+* **Systems:** Cisco IOS.
+* **Protocols:** OSPFv3, IPv6, IEEE 802.1Q (Trunking), DHCP, ICMP.
+
+---
+
+## 🔍 Why Networks for DFIR?
+A deep understanding of the infrastructure allows an incident response analyst to:
+1. **Map the Flow:** Understand where an attacker’s traffic has passed through.
+2. **Collect Evidence:** Know which devices (switches or routers) hold connection information (ARP, MAC, DHCP leases).
+3. **Containment:** Know how to isolate ports or VLANs to prevent the spread of malware.
+
+---
+**Maintained by:** Daniel Mendes (@danmdz25)  
+*Focus on Cybersecurity | IT Support | DFIR Student*
